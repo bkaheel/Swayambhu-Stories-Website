@@ -7,10 +7,9 @@ Welcome to the official repository for the **Swayambhu Stories Website: Unity Mo
 ## Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
+- [Pages](#pages)
 - [Tech Stack](#tech-stack)
 - [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
 - [License](#license)
 
 ---
@@ -34,6 +33,31 @@ This website serves as a cultural resource for users, primarily from American an
 - **Frontend**: HTML, CSS, JavaScript
 - **3D Model**: Unity (WebGL build)
 - **Hosting**: NGINX server on Cloudapps
+
+---
+
+## Setup Instructions
+### Carolina Cloudapps Hosting
+
+To host this website using [Carolina Cloudapps]{https://cloudapps.unc.edu/}, 
+- Apply for a liscence with your onyen account
+- Sign in to Cloudapps, click '+Add'
+- Click 'Import from Git'
+- Enter link to this repository: https://github.com/Fletch235/Swayambhu-Stories-Unity.git
+- Change Application and Name Sections
+- Click 'Edit import strategy'
+- Choose NGINX and Click Create
+- Once the build is complete you should be able to navigate to the website link in the 'Routes' Section 
+
+### Local Hosting
+To run the website locally, no dependencies are required. You can start a local development server using Python:
+
+```bash
+python -m http.server 8080
+```
+Then open your browser and navigate to http://localhost:8080.
+
+
 
 ---
 
