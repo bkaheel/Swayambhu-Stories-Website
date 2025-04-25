@@ -1,10 +1,9 @@
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slider img");
 const dots = document.querySelectorAll(".slider-nav a");
-const slide1Text = document.querySelector(".slide1-text");
+const slidesText = document.querySelectorAll(".slide-text");
 
 function plusSlides(n) {
-  console.log(n);
   currentSlide += n;
 
   // Pressing prev on the first image should loop to the last image
@@ -14,27 +13,29 @@ function plusSlides(n) {
   if (currentSlide >= slides.length) currentSlide = 0;
 
   // Trigger scrolling animation
-  slides[currentSlide].scrollIntoView({
-    behavior: "smooth",
-    inline: "start",
-    block: "nearest",
-  });
-  dots[currentSlide];
+  // slides[currentSlide].scrollIntoView({
+  //   behavior: "smooth",
+  //   inline: "start",
+  //   block: "nearest",
+  // });
+  // dots[currentSlide];
+
+  // Fade in and out animation
+  slides.forEach((slide) => (slide.style.display = "none"));
+  slides[currentSlide].style.display = "block";
 
   // Remove Active dots
   dots.forEach((dot) => dot.classList.remove("active-dot"));
-
   // Add to current dot
   dots[currentSlide].classList.add("active-dot");
+
   updateTextVisibility();
 }
 
 function updateTextVisibility() {
-  if (currentSlide === 0) {
-    slide1Text.style.opacity = "1";
-    slide1Text.style.pointerEvents = "auto";
-  } else {
-    slide1Text.style.opacity = "0";
-    slide1Text.style.pointerEvents = "none";
-  }
+  slidesText.forEach((slideText, index) => {
+    const isActive = index === currentSlide;
+    slideText.style.opacity = isActive ? "1" : "0";
+    slideText.style.pointerEvents = isActive ? "auto" : "none";
+  });
 }
