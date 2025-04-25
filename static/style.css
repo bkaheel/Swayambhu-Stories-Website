@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 html {
   height: 100%;
 }
@@ -188,7 +184,6 @@ footer {
 .impact-container,
 .work-container {
   /* margin-top: 50px; */
-  /* height: 800px; */
   position: relative;
   width: 100%;
   display: flex;
@@ -203,7 +198,7 @@ footer {
 .mission-image,
 .impact-image,
 .work-image {
-  width: 70%;
+  width: 80%;
   border-radius: 20px;
   object-fit: cover;
   filter: brightness(0.85);
@@ -236,7 +231,7 @@ footer {
 .impact-text,
 .work-text {
   position: absolute;
-  width: 50%;
+  width: 60%;
   transform: translateX(-50%);
   top: 60%;
   left: 50%;
@@ -244,6 +239,13 @@ footer {
   font-size: 1.5rem;
   font-size: clamp(1rem, 1vw + 1rem, 2.5rem);
   text-align: center;
+}
+
+.slide1-text {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  transition-delay: 0s; /* No delay when hiding */
+  pointer-events: none;
 }
 
 @media (max-width: 700px) {
@@ -267,7 +269,8 @@ footer .sub-hero {
 */
 .slider-wrapper {
   position: relative;
-  max-width: 48rem;
+  /* max-width: 48rem; */
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -312,6 +315,11 @@ footer .sub-hero {
   opacity: 1;
 }
 
+.slider-nav a.active-dot {
+  background-color: #ff9016;
+  opacity: 1;
+}
+
 /* Next & previous buttons */
 .prev,
 .next {
@@ -329,13 +337,11 @@ footer .sub-hero {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);

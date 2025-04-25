@@ -35,24 +35,40 @@
     <div class="mission-container">
       <div class="slider-wrapper">
         <div class="slider">
+          <!-- Image 1 and text-->
           <img
+            class="mission-image"
             src="images/Nepal-12 (1)-min.jpg"
             alt="image of Swayambhu temple"
             id="slide-1"
           />
+          <div class="slide1-text">
+            <div class="section-number">01</div>
+            <div class="mission-heading">Mission</div>
+            <p class="mission-text">
+              Protect, conserve, and document Swayambhu’s cultural heritage and
+              diverse cultural knowledge.
+            </p>
+          </div>
+
+          <!-- Image 2 and text-->
           <img
             src="images/Nepal-06-min.jpg"
             alt="image of Swayambhu temple"
             id="slide-2"
           />
+
+          <!-- Image 3 and text-->
           <img
             src="images/Nepal-03-min.jpg"
             alt="image of Swayambhu temple"
             id="slide-3"
           />
         </div>
+
+        <!--Clicking the circle does not properly update the color, it also causes a bug that shifts the screen down. Potentially just get rid of the hrefs and just have an empty <a> tag-->
         <div class="slider-nav">
-          <a href="#slide-1"></a>
+          <a class="active-dot" href="#slide-1"></a>
           <a href="#slide-2"></a>
           <a href="#slide-3"></a>
         </div>
@@ -60,17 +76,6 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <!-- <img
-        class="mission-image2"
-        src="images/Nepal-12 (1)-min.jpg"
-        alt="image of Swayambhu temple"
-      />
-      <div class="section-number">01</div>
-      <div class="mission-heading2">Mission</div>
-      <p class="mission-text">
-        Protect, conserve, and document Swayambhu’s cultural heritage and
-        diverse cultural knowledge.
-      </p> -->
     </div>
 
     <div class="impact-container">
@@ -101,5 +106,6 @@
         diverse cultural knowledge.
       </p>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

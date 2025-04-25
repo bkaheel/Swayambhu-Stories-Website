@@ -1,32 +1,40 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slider img");
+const dots = document.querySelectorAll(".slider-nav a");
+const slide1Text = document.querySelector(".slide1-text");
 
-// Next/previous controls
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  console.log(n);
+  currentSlide += n;
+
+  // Pressing prev on the first image should loop to the last image
+  if (currentSlide < 0) currentSlide = slides.length - 1;
+
+  // Pressing next on the last image should loop to the first image
+  if (currentSlide >= slides.length) currentSlide = 0;
+
+  // Trigger scrolling animation
+  slides[currentSlide].scrollIntoView({
+    behavior: "smooth",
+    inline: "start",
+    block: "nearest",
+  });
+  dots[currentSlide];
+
+  // Remove Active dots
+  dots.forEach((dot) => dot.classList.remove("active-dot"));
+
+  // Add to current dot
+  dots[currentSlide].classList.add("active-dot");
+  updateTextVisibility();
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
+function updateTextVisibility() {
+  if (currentSlide === 0) {
+    slide1Text.style.opacity = "1";
+    slide1Text.style.pointerEvents = "auto";
+  } else {
+    slide1Text.style.opacity = "0";
+    slide1Text.style.pointerEvents = "none";
   }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
 }
