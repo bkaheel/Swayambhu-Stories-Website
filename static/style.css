@@ -205,6 +205,10 @@ footer {
 
 .impact-slide-text {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
   height: 100%;
   width: 50%;
   left: 0;
@@ -230,14 +234,11 @@ footer {
 }
 
 .impact-slide .impact-text {
-  position: absolute;
-  top: 60%;
-  left: 50%;
   width: 80%;
   color: white;
   font-size: 1.5rem;
-  transform: translate(-50%, -50%);
   font-size: clamp(1rem, 1vw + 1rem, 2.5rem);
+  padding-left: 1rem;
 }
 
 .section-number {
@@ -251,8 +252,9 @@ footer {
 }
 
 .impact-slide .section-number {
-  top: 15%;
-  left: 15%;
+  position: static;
+  transform: none;
+  padding-left: 1rem;
 }
 
 .work-container .section-number {
@@ -261,7 +263,6 @@ footer {
 }
 
 .mission-heading,
-.impact-heading,
 .work-heading {
   position: absolute;
   top: 50%;
@@ -272,10 +273,13 @@ footer {
   font-size: clamp(6rem, 2vw + 6rem, 10rem);
 }
 
-.impact-slide .impact-heading {
-  left: 40%;
-  top: 30%;
+.impact-heading {
+  position: static;
   color: #ff9016;
+  font-weight: bold;
+  font-size: clamp(6rem, 2vw + 6rem, 10rem);
+  padding-left: 1rem;
+  margin-top: -4rem;
 }
 
 .work-heading {
