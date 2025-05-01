@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-Swayambhu Stories-0.1.0";
 const contentToCache = [
-    "Build/TestBuildGL.loader.js",
-    "Build/TestBuildGL.framework.js",
-    "Build/TestBuildGL.data",
-    "Build/TestBuildGL.wasm",
+    "Build/5.1.25.loader.js",
+    "Build/5.1.25.framework.js",
+    "Build/5.1.25.data",
+    "Build/5.1.25.wasm",
     "TemplateData/style.css"
 
 ];
