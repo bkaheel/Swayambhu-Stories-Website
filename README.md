@@ -40,7 +40,7 @@ This website serves as a cultural resource for users, primarily from American an
 ### Carolina Cloudapps Hosting
 
 To host this website using [Carolina Cloudapps]{https://cloudapps.unc.edu/}, 
-- Apply for a liscence with your onyen account
+- Apply for a license with your onyen account
 - Sign in to Cloudapps, click '+Add'
 - Click 'Import from Git'
 - Enter link to this repository: https://github.com/Fletch235/Swayambhu-Stories-Unity.git
