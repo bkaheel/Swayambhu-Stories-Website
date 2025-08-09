@@ -25,6 +25,10 @@ header {
   background-color: #ffffff;
 }
 
+a {
+  text-decoration: none;
+}
+
 footer {
   left: 0;
   bottom: 0;
@@ -114,8 +118,17 @@ footer {
 }
 
 @media (max-width: 1200px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
   .content-wrapper {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -138,12 +151,7 @@ footer {
   display: flex;
   justify-content: start;
   align-items: center;
-}
-
-@media (max-width: 900px) {
-  .explore-button-container {
-    justify-content: center;
-  }
+  width: 90%;
 }
 
 .explore-button {
@@ -233,12 +241,11 @@ footer {
   height: auto;
 }
 
-.impact-slide .impact-text {
-  width: 80%;
+.impact-text {
   color: white;
-  font-size: 1.5rem;
   font-size: clamp(1rem, 1vw + 1rem, 2.5rem);
   padding-left: 1rem;
+  width: 90%;
 }
 
 .section-number {
@@ -279,7 +286,6 @@ footer {
   font-weight: bold;
   font-size: clamp(6rem, 2vw + 6rem, 10rem);
   padding-left: 1rem;
-  margin-top: -4rem;
 }
 
 .work-heading {
@@ -295,7 +301,6 @@ footer {
   top: 60%;
   left: 50%;
   color: white;
-  font-size: 1.5rem;
   font-size: clamp(1rem, 1vw + 1rem, 2.5rem);
   text-align: center;
 }
@@ -314,7 +319,6 @@ footer {
 }
 
 .mission-text3 {
-  font-size: clamp(0.5rem, 1vw + 0.5rem, 1.5rem);
   padding: 0.5rem;
   text-align: start;
 }
@@ -352,21 +356,8 @@ footer {
 .slide-text {
   opacity: 0;
   transition: opacity 0.4s ease;
-  transition-delay: 0s; /* No delay when hiding */
+  transition-delay: 0s;
   pointer-events: auto;
-}
-
-/* .slide2-text {
-  width: 80%;
-} */
-
-@media (max-width: 700px) {
-  .mission-text {
-    width: 80%;
-  }
-  .slider {
-    aspect-ratio: 1/1;
-  }
 }
 
 footer .hero {
@@ -377,6 +368,74 @@ footer .sub-hero {
   color: white;
 }
 
+@media (max-width: 900px) {
+  .explore-button-container {
+    justify-content: center;
+  }
+
+  .explore-button {
+    margin: 15px;
+  }
+
+  .mission-heading,
+  .impact-heading,
+  .work-heading {
+    font-size: clamp(4rem, 4vw + 1rem, 6rem);
+    font-weight: bold;
+  }
+
+  .section-number {
+    font-size: clamp(1.5rem, 1vw + 1.5rem, 2rem);
+  }
+
+  .mission-text1,
+  .mission-text2,
+  .mission-text3 {
+    font-size: clamp(0.5rem, 1vw + 0.5rem, 1.5rem);
+    font-weight: bold;
+    padding: 0;
+  }
+
+  .mission-text1 {
+    width: 85%;
+  }
+
+  .work-text1,
+  .work-text2,
+  .work-text3 {
+    font-size: clamp(0.5rem, 1vw + 0.5rem, 1.5rem);
+    font-weight: bold;
+  }
+
+  .impact-text {
+    font-size: clamp(0.5rem, 1vw + 0.5rem, 1.5rem);
+    font-weight: bold;
+  }
+
+  .slide-text ul li:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .slider {
+    aspect-ratio: 1/1;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .mission-heading,
+  .impact-heading,
+  .work-heading {
+    font-size: clamp(3rem, 5vw + 0.5rem, 4rem);
+  }
+
+  .section-number {
+    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+  }
+}
 /* ----------------------------------- Image Slider ------------------------------------
 */
 .slider-wrapper {
