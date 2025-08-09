@@ -1,9 +1,16 @@
 const cacheName = "DefaultCompany-Swayambhu Stories-0.1.0";
 const contentToCache = [
+<<<<<<< HEAD
     "Build/Unity.loader.js",
     "Build/Unity.framework.js",
     "Build/Unity.data",
     "Build/Unity.wasm",
+=======
+    "Build/swayambhu_test.loader.js",
+    "Build/swayambhu_test.framework.js",
+    "Build/swayambhu_test.data",
+    "Build/swayambhu_test.wasm",
+>>>>>>> 24c4d5d30e4ff52dfab3766ecae8bf8c90ebaf7c
     "TemplateData/style.css"
 
 ];
