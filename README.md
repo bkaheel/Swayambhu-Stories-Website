@@ -1,66 +1,111 @@
-# Swayambhu Stories Website: Unity Model
+# Swayambhu Stories Website
 
-Welcome to the official repository for the **Swayambhu Stories Website: Unity Model**. This site is designed to share the rich cultural and historical significance of the Swayambhu Mahachaitya temple in Nepal through both educational content and an interactive 3D Unity experience.
-
----
+Welcome to the official repository for **Swayambhu Stories**. This website serves as a digital platform to preserve and share the rich cultural heritage of the Swayambhu Mahachaitya temple in Nepal through immersive content, educational resources, and interactive experiences.
 
 ## Table of Contents
-
 - [Overview](#overview)
-- [Pages](#pages)
+- [Features](#features)
+- [Project Structure](#project-structure)
 - [Tech Stack](#tech-stack)
 - [Setup Instructions](#setup-instructions)
+- [Development Guide](#development-guide)
 - [License](#license)
 
----
-
 ## Overview
+Swayambhu Stories is a public-facing, community-engaged project that combines digital preservation techniques with cultural storytelling. The website serves as a platform to:
+- Document and preserve Swayambhu's cultural heritage
+- Share stories and knowledge from community stakeholders
+- Provide interactive ways to explore the temple complex
+- Support educational and research initiatives
 
-This website serves as a cultural resource for users, primarily from American and Nepalese backgrounds, who are interested in exploring the stories and heritage of the Swayambhu Mahachaitya temple in Nepal. It features general information about the temple, details about the team behind the project, and a Unity-based 3D model that users can explore directly in the browser.
+## Features
+- **Responsive Design**: Optimized for all device sizes
+- **Modern UI**: Glass-morphism effects and dark theme
+- **Interactive Elements**: 
+  - Image galleries with cultural content
+  - Smooth scrolling navigation
+  - Animated transitions
+- **Accessibility**: WCAG compliance and semantic HTML
+- **Performance**: Optimized image loading and animations
+- **Unity Integration**: 3D model exploration (in Unity subdirectory) //MAY NEED TO CHANGE TO THREE.JS
 
----
-
-## Pages
-
-- **Landing Page** – Introduction to the project and its mission.
-- **Who We Are** – Meet the team and understand the goals of the project.
-- **Unity Model Page** – Explore an interactive 3D WebGL model of the Swayambhu temple built in Unity.
-
----
+## Project Structure
+```
+Swayambhu-Stories-Website/
+├── index.html              # Main landing page
+├── about.html             # About page with mission and impact
+├── static/
+│   └── style.css         # Main stylesheet (organized by components)
+├── images/               # Optimized image assets
+├── Unity/               # Unity WebGL build files
+├── script.js            # Core JavaScript functionality
+└── Documents/          # Project documentation
+```
 
 ## Tech Stack
-
-- **Frontend**: HTML, CSS, JavaScript
-- **3D Model**: Unity (WebGL build)
-- **Hosting**: NGINX server on Cloudapps
-
----
+- **Frontend Core**:
+  - HTML5 (Semantic markup)
+  - CSS3 (Custom Properties, Flexbox)
+  - JavaScript (ES6+)
+- **Libraries & Frameworks**:
+  - Font Awesome 6.4.0
+  - Inria Sans (Google Fonts)
+- **3D Experience**:
+  - Unity WebGL
+- **Hosting**:
+  - NGINX server on Carolina Cloudapps
 
 ## Setup Instructions
-### Carolina Cloudapps Hosting
 
-To host this website using [Carolina Cloudapps]{https://cloudapps.unc.edu/}, 
-- Apply for a license with your onyen account
-- Sign in to Cloudapps, click '+Add'
-- Click 'Import from Git'
-- Enter link to this repository: https://github.com/Fletch235/Swayambhu-Stories-Unity.git
-- Change Application and Name Sections
-- Click 'Edit import strategy'
-- Choose NGINX and Click Create
-- Once the build is complete you should be able to navigate to the website link in the 'Routes' Section 
+### Local Development
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/[username]/Swayambhu-Stories-Website.git
+   ```
+2. Start a local server:
+   ```bash
+   python -m http.server 8080
+   ```
+3. Visit http://localhost:8080
 
-### Local Hosting
-To run the website locally, no dependencies are required. You can start a local development server using Python:
+### Carolina Cloudapps Deployment
+1. Visit https://cloudapps.unc.edu/
+2. Sign in with your ONYEN account
+3. Click '+Add' → 'Import from Git'
+4. Configure:
+   - Repository URL: [your-repo-url]
+   - Application name: swayambhu-stories
+   - Builder: NGINX
+5. Click 'Create'
 
-```bash
-python -m http.server 8080
-```
-Then open your browser and navigate to http://localhost:8080.
+## Development Guide
 
+### Code Style
+- Use semantic HTML5 elements
+- Follow BEM naming for CSS classes
+- Maintain dark theme compatibility
+- Keep accessibility in mind
+- Document complex functions
 
+### CSS Organization
+- Custom properties for theming
+- Component-based organization
+- Mobile-first responsive design
+- Minimal specificity
 
----
+### Image Guidelines
+- Optimize all images
+- Use descriptive alt text
+- Maintain aspect ratios
+- Provide fallbacks
+
+### Performance Considerations
+- Lazy load images
+- Minimize JavaScript
+- Use CSS transforms
+- Cache appropriately
 
 ## License
-This repository is not open to external contributions.
+© 2025 Swayambhu Stories Project. All rights reserved.
+This repository is not open for external contributions without explicit permission.
 

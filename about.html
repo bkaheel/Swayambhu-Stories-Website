@@ -3,199 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--Custom CSS-->
+    <meta name="description" content="About Swayambhu Stories - A digital heritage preservation project" />
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./static/style.css" />
-
-    <!--inria sans Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
 
-    <title>About</title>
+    <title>About - Swayambhu Stories</title>
   </head>
-  <body style="background-color: #f8f4ed">
+  <body>
+    <!-- Navigation Header -->
     <header>
       <div class="topnav">
         <a href="index.html" class="no-hover">
-          <img class="house-icon" src="./images/house.svg" />
+          <img class="house-icon" src="./images/house.svg" alt="Home icon" />
         </a>
-
         <div class="pages">
-          <a class="link" href="index.html">Swayambhu Stories</a>
-          <a class="link active" href="about.html">About</a>
-          <!-- <a class="link" href="team.html">Team</a> -->
+          <a class="link" href="index.html">
+            <i class="fa-solid fa-place-of-worship"></i> Swayambhu Stories
+          </a>
+          <a class="link active" href="about.html">
+            <i class="fa-solid fa-info-circle"></i> About
+          </a>
         </div>
       </div>
     </header>
-    <!-- Mission -->
-    <div class="mission-container">
-      <div class="slider-wrapper">
-        <!-- To Do: Image / Text load sync -->
 
-        <div class="slider">
-          <!-- Image 1 and text-->
-          <img
-            class="mission-image"
-            src="images/Nepal-12 (1)-min.jpg"
-            alt="image of Swayambhu temple"
-            id="slide-1"
-          />
-          <div class="slide-text" style="opacity: 1">
-            <div class="section-number">01</div>
-            <div class="mission-heading">Mission</div>
-            <p class="mission-text1">
-              Protect, conserve, and document Swayambhu’s cultural heritage and
-              diverse cultural knowledge.
-            </p>
-          </div>
-
-          <!-- Image 2 and text-->
-          <img
-            src="images/Nepal-06-min.jpg"
-            alt="image of Swayambhu temple"
-            id="slide-2"
-          />
-          <div class="slide-text">
-            <p class="mission-text1 mission-text2">
-              Swayambhu Stories is a public-facing, community engaged project
-              that uses conservation-quality 3D model to document and preserve
-              the unique cultural heritage embodied at Swayambhu. This project
-              aims to elevate stakeholder voices & empower caretaker communities
-              by making the virtual pilgrimage to this regionally-significant
-              and UNESCO-recognized World Heritage site accessible to people
-              across the Himalayas and the world.
-            </p>
-          </div>
-
-          <!-- Image 3 and text-->
-          <img
-            src="images/Nepal-03-min.jpg"
-            alt="image of Swayambhu temple"
-            id="slide-3"
-          />
-          <div class="slide-text">
-            <div class="mission-text1 mission-text2 mission-text3">
-              <h1 class="mission-heading3">Goals & Outcomes:</h1>
-              <ul>
-                <li>
-                  Protect & conserve Swayambhu’s material cultural heritage
-                </li>
-                <li>
-                  Document the diverse forms of knowledge, practice, and
-                  traditional cultural expressions associated with the templ.
-                </li>
-                <li>
-                  Elevate stakeholder voices & empower caretaker communities
-                </li>
-                <li>
-                  Participatory structure, best practices for cross-cultural
-                  partnerships
-                </li>
-                <li>
-                  Skill training and technology-transfer are fundamental parts
-                  of project design
-                </li>
-                <li>
-                  Inclusive project output acknowledges & advances diverse goals
-                  held by different communities.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!--Clicking the circle does not properly update the color, it also causes a bug that shifts the screen down. Potentially just get rid of the hrefs and just have an empty <a> tag-->
-        <div class="slider-nav">
-          <a class="active-dot" href="#slide-1"></a>
-          <a href="#slide-2"></a>
-          <a href="#slide-3"></a>
-        </div>
-
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Swayambhu Stories</h1>
+        <p class="hero-subtitle">Preserving Cultural Heritage Through Digital Innovation</p>
       </div>
-    </div>
+      <div class="scroll-indicator">
+        <span class="scroll-text">Scroll to Explore</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </section>
 
-    <div class="impact-container">
-      <div class="impact-slide">
-        <div class="slider">
-          <img
-            class="impact-image"
-            src="images/class.jpg"
-            alt="image of teaching in classroom"
-          />
-          <div class="impact-slide-text">
-            <div class="section-number">02</div>
-            <div class="impact-heading">Impact</div>
-            <p class="impact-text">
-              Archive of intangible heritage (oral history, interviews, focus
-              groups, recordings of rituals, and other events)
-            </p>
+    <!-- Mission Section with Image Gallery -->
+    <section class="content-section mission-section">
+      <div class="section-image">
+        <div class="image-container">
+          <img src="images/Nepal-12 (1)-min.jpg" alt="Swayambhu temple main view" class="active" />
+          <img src="images/Nepal-06-min.jpg" alt="Swayambhu temple architectural detail" />
+          <img src="images/Nepal-03-min.jpg" alt="Swayambhu temple cultural view" />
+        </div>
+        <div class="image-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="section-number">01</div>
+        <h2 class="section-title">Mission</h2>
+        <div class="section-text">
+          <p>
+            Protect, conserve, and document Swayambhu's cultural heritage and
+            diverse cultural knowledge.
+          </p>
+          <p>
+            Swayambhu Stories is a public-facing, community engaged project
+            that uses conservation-quality 3D model to document and preserve
+            the unique cultural heritage embodied at Swayambhu.
+          </p>
+          <div class="goals-section">
+            <h3>Goals & Outcomes:</h3>
+            <ul>
+              <li>Protect & conserve Swayambhu's material cultural heritage</li>
+              <li>
+                Document the diverse forms of knowledge, practice, and
+                traditional cultural expressions associated with the temple
+              </li>
+              <li>Elevate stakeholder voices & empower caretaker communities</li>
+              <li>
+                Participatory structure, best practices for cross-cultural
+                partnerships
+              </li>
+              <li>
+                Skill training and technology-transfer are fundamental parts
+                of project design
+              </li>
+              <li>
+                Inclusive project output acknowledges & advances diverse goals
+                held by different communities
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="work-container">
-      <div class="slider-wrapper">
-        <div class="slider">
-          <!-- Image 1 and text-->
-          <img
-            class="work-image"
-            src="images/Nepal-16 (1)-min.jpg"
-            alt="image of 3D
-      scanner equipment used to create temple model"
-          />
-          <div class="slide-text" style="opacity: 1">
-            <div class="section-number">03</div>
-            <div class="work-heading">Work</div>
-            <p class="work-text1">
-              Community Engagement, Research, Training, Field Work, Oral History
-              Collection, Data Analysis, Sharing
-            </p>
-          </div>
-
-          <!-- Image 2 and text-->
-          <img
-            src="images/518050de-a3e5-4be1-bf8b-1c27a9f31884.jpg"
-            alt="Photo of interview"
-          />
-          <div class="slide-text">
-            <p class="work-text1 work-text2">
-              Our work will result in a conservation-quality 3D model of the
-              temple complex and an accompanying archive of oral history and
-              interviews with stakeholders and practitioners
-            </p>
-          </div>
-
-          <!-- Image 3 and text-->
-          <img
-            src="images/IMG-20231022-WA0001.jpg"
-            alt="Photo of Jim on roof"
-          />
-
-          <div class="slide-text">
-            <p class="work-text1 work-text2 work-text3">
-              Annotated with text and video showing Swayambhu/Buddhism/ Nepali
-              cultural life from the perspective of stakeholder communities
-            </p>
-          </div>
-
-          <div class="slider-nav">
-            <a class="active-dot" href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-          </div>
-
-          <a class="prev">&#10094;</a>
-          <a class="next">&#10095;</a>
+    <!-- Impact Section -->
+    <section class="content-section impact-section reverse">
+      <div class="section-image">
+        <div class="image-container">
+          <img src="images/class.jpg" alt="Teaching and community engagement" class="active" />
+          <img src="images/e5f81d78-f7a5-473d-9c63-963c2d64f80a.jpg" alt="Cultural preservation work" />
+          <img src="images/IMG_3995.jpg" alt="Community interaction" />
+        </div>
+        <div class="image-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
         </div>
       </div>
-    </div>
+      <div class="section-content">
+        <div class="section-number">02</div>
+        <h2 class="section-title">Impact</h2>
+        <div class="section-text">
+          <p>
+            Archive of intangible heritage (oral history, interviews, focus
+            groups, recordings of rituals, and other events)
+          </p>
+          <p>
+            Creating a lasting digital archive that preserves and shares the rich
+            cultural heritage of Swayambhu for future generations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="content-section work-section">
+      <div class="section-image">
+        <div class="image-container">
+          <img src="images/Nepal-16 (1)-min.jpg" alt="3D scanning equipment in use" class="active" />
+          <img src="images/518050de-a3e5-4be1-bf8b-1c27a9f31884.jpg" alt="Documentation process" />
+          <img src="images/IMG-20231022-WA0001.jpg" alt="Field work" />
+        </div>
+        <div class="image-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="section-number">03</div>
+        <h2 class="section-title">Work</h2>
+        <div class="section-text">
+          <p>
+            Community Engagement, Research, Training, Field Work, Oral History
+            Collection, Data Analysis, Sharing
+          </p>
+          <p>
+            Our work will result in a conservation-quality 3D model of the
+            temple complex and an accompanying archive of oral history and
+            interviews with stakeholders and practitioners
+          </p>
+          <p>
+            Annotated with text and video showing Swayambhu/Buddhism/Nepali
+            cultural life from the perspective of stakeholder communities
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>
