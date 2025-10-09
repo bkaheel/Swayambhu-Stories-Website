@@ -319,9 +319,16 @@ footer:hover {
   width: 90%;
 }
 
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 20px 20px 0 20px;  /* top right bottom left */
+}
+
 .explore-button {
   background-color: var(--primary-color);
-  margin: 20px;
   font-weight: 600;
   font-size: 18px;
   border: none;
@@ -334,6 +341,9 @@ footer:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(255, 144, 22, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .explore-button:hover {
@@ -345,8 +355,37 @@ footer:hover {
   transform: translateY(1px);
 }
 
-.explore-button br {
-  size: 80%;
+.legacy-model-link {
+  color: var(--text-color);
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  margin-left: 4px;
+}
+
+.legacy-model-link i {
+  font-size: 12px;
+}
+
+.legacy-model-link:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .button-group {
+    align-items: center;
+    width: 100%;
+  }
+  
+  .legacy-model-link {
+    margin-top: -10px;
+  }
 }
 
 .large-heading {
